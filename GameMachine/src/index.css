@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #00071f;
+    --secondary-color: #1e0055;
+    --color-purple: #5F2B7F;
+    --color-purple-neon: #BC13FE;
+    --color-pink: #EC6094;
+    --color-blue: #146CA6;
+    --color-cyan: #00FFFF;
+    --color-green: #00C63F;
+    --color-mint-cream: #BCEDDC;
+    --color-orange: #FB610A;
+
+    --title-font:"Pixelify Sans", sans-serif;
+    --body-font:"Roboto", sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+}

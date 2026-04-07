@@ -1,0 +1,61 @@
+.navbar {
+    background-color: var(--secondary-color);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom:2px solid var(--color-purple-neon);
+    border-radius: 0px;
+    box-shadow:
+        0 0 5px var(--color-purple-neon),
+        0 0 10px var(--color-purple-neon),
+        0 0 20px var(--color-purple-neon),
+        0 0 40px var(--color-purple-neon);
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  animation: pulseNeon 1s infinite;
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 2.8rem;
+    cursor: pointer;
+}
+
+@keyframes pulseNeon {
+  0% {
+    box-shadow:
+      0 0 5px var(--color-purple-neon),
+      0 0 10px var(--color-purple-neon),
+      0 0 20px var(--color-purple-neon),
+      0 0 40px var(---color-purple-neon);
+  }
+  50% {
+    box-shadow:
+      0 0 15px var(--color-purple-neon),
+      0 0 30px var(--color-purple-neon),
+      0 0 60px var(--color-purple-neon),
+      0 0 20px var(--color-purple-neon);
+  }
+  100% {
+    box-shadow:
+      0 0 5px var(--color-purple-neon),
+      0 0 10px var(--color-purple-neon),
+      0 0 20px var(--color-purple-neon),
+      0 0 40px var(--color-purple-neon);
+  }
+}
+
+.title {
+    font-family: var(--title-font);
+    color: var(--color-purple-neon);
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
+}
