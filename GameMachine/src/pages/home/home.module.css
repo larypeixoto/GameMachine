@@ -22,16 +22,16 @@
     }
 }
 
-.greeting {
+.title {
     font-family: var(--title-font);
-    color: var(--color-purple-neon);
+    color: var(--tertiary-color);
     font-size: 2.2rem;
     letter-spacing: 0.1rem;
 }
 
 .logo {
     height: 8rem;
-    filter: drop-shadow(0 0 6px var(--color-purple-neon)) drop-shadow(0 0 12px var(--color-purple-neon)) drop-shadow(0 0 20px var(--color-purple-neon));
+    filter: drop-shadow(0 0 6px var(--tertiary-color)) drop-shadow(0 0 12px var(--tertiary-color)) drop-shadow(0 0 20px var(--tertiary-color));
 }
 
 .logo:hover {
@@ -62,7 +62,14 @@
 
 .menuGreeting {
     font-family: var(--title-font);
-    color: var(--color-purple-neon);
+    color: var(--tertiary-color);
     font-size: 2.2rem;
     letter-spacing: 0.1rem;
+}
+
+.containerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }

@@ -1,23 +1,25 @@
-.cardContainer {
-    background-color: var(--color-purple-neon);
+.card {
+    background-color: var(--tertiary-color);
+    opacity: 0.9;
     border-radius: 1rem;
-    width: 20rem;
-    height: 8rem;
+    width: 24rem;
+    height: 10rem;
     padding: 1.5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.cardContainer:hover {
+.card:hover {
+    opacity: 1;
     transform: scale(1.05);
-    background-color: var(--color-purple-neon);
+    background-color: var(--tertiary-color);
     animation: pulseNeon 1s infinite;
     box-shadow:
-        0 0 2px var(--color-purple-neon),
-        0 0 4px var(--color-purple-neon),
-        0 0 10px var(--color-purple-neon),
-        0 0 20px var(--color-purple-neon);
+        0 0 2px var(--tertiary-color),
+        0 0 4px var(--tertiary-color),
+        0 0 10px var(--tertiary-color),
+        0 0 20px var(--tertiary-color);
     transition: box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -39,6 +41,7 @@
 .title {
     font-family: var(--title-font);
     color: var(--primary-color);
+    text-transform: uppercase;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -47,4 +50,5 @@
     font-family: var(--body-font);
     color: var(--primary-color);
     font-size: 1rem;
+    text-align: center; 
 }

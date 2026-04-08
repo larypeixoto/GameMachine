@@ -1,0 +1,17 @@
+.optionsButton {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+    background-color: var(--quaternary-color);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: var(--body-font);
+}
+
+.selected {
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+    font-weight: bold;
+    transform: scale(1.05);
+}

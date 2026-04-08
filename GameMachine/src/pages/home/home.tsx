@@ -1,9 +1,10 @@
 import styles from "./home.module.css";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 import { useEffect, useState } from "react";
 
-import { CardMenu } from "../components/cardMenu/cardMenu";
+import { CardMenu } from "../../components/cards/cardMenu/cardMenu.js";
+import { games } from "../../data/games.js";
 
 export function Home() {
 
@@ -21,7 +22,7 @@ export function Home() {
     <div className={styles.container}>
       {showOptions && (
         <div className={styles.content}>
-          <h1 className={styles.greeting}>
+          <h1 className={styles.title}>
             Olá, jogador!
           </h1>
           <img
@@ -33,7 +34,16 @@ export function Home() {
             <h2 className={styles.menuGreeting}>
               O que você quer jogar hoje?
             </h2>
-            <CardMenu />
+            <div className={styles.containerCards}>
+              {games.map(game => (
+              <CardMenu
+                key={game.id}
+                title={game.title}
+                description={game.description}
+                route={game.route}
+              />
+            ))}
+          </div>
           </div>
         </div>
       )}

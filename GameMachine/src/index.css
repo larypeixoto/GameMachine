@@ -1,8 +1,9 @@
 :root {
     --primary-color: #00071f;
     --secondary-color: #1e0055;
+    --tertiary-color: #BC13FE;
+    --quaternary-color: #e8c6fd;
     --color-purple: #5F2B7F;
-    --color-purple-neon: #BC13FE;
     --color-pink: #EC6094;
     --color-blue: #146CA6;
     --color-cyan: #00FFFF;
@@ -22,7 +23,7 @@
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   height: 100%;
   width: 100%;
   line-height: 1.5;

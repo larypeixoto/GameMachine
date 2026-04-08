@@ -1,17 +1,18 @@
 .navbar {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     height: 4rem;
     display: flex;
     align-items: center;
     padding: 0 2rem;
-    border-bottom:2px solid var(--color-purple-neon);
+    border-bottom:2px solid var(--tertiary-color);
     border-radius: 0px;
     box-shadow:
-        0 0 5px var(--color-purple-neon),
-        0 0 10px var(--color-purple-neon),
-        0 0 20px var(--color-purple-neon),
-        0 0 40px var(--color-purple-neon);
+        0 0 5px var(--tertiary-color),
+        0 0 10px var(--tertiary-color),
+        0 0 20px var(--tertiary-color),
+        0 0 40px var(--tertiary-color);
     transition: box-shadow 0.3s ease;
+    margin: 0 0 2rem 0;
 }
 
 .navbar:hover {
@@ -32,30 +33,30 @@
 @keyframes pulseNeon {
   0% {
     box-shadow:
-      0 0 5px var(--color-purple-neon),
-      0 0 10px var(--color-purple-neon),
-      0 0 20px var(--color-purple-neon),
-      0 0 40px var(---color-purple-neon);
+      0 0 5px var(--tertiary-color),
+      0 0 10px var(--tertiary-color),
+      0 0 20px var(--tertiary-color),
+      0 0 40px var(---tertiary-color);
   }
   50% {
     box-shadow:
-      0 0 15px var(--color-purple-neon),
-      0 0 30px var(--color-purple-neon),
-      0 0 60px var(--color-purple-neon),
-      0 0 20px var(--color-purple-neon);
+      0 0 15px var(--tertiary-color),
+      0 0 30px var(--tertiary-color),
+      0 0 60px var(--tertiary-color),
+      0 0 20px var(--tertiary-color);
   }
   100% {
     box-shadow:
-      0 0 5px var(--color-purple-neon),
-      0 0 10px var(--color-purple-neon),
-      0 0 20px var(--color-purple-neon),
-      0 0 40px var(--color-purple-neon);
+      0 0 5px var(--tertiary-color),
+      0 0 10px var(--tertiary-color),
+      0 0 20px var(--tertiary-color),
+      0 0 40px var(--tertiary-color);
   }
 }
 
 .title {
     font-family: var(--title-font);
-    color: var(--color-purple-neon);
+    color: var(--tertiary-color);
     font-size: 2.2rem;
     letter-spacing: 0.1rem;
 }

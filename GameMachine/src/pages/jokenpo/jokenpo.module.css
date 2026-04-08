@@ -1,0 +1,136 @@
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    font-family: var(--title-font);
+    color: var(--tertiary-color);
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.containerGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.targetContainer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+}
+
+.text {
+    font-family: var(--body-font);
+    color: var(--quaternary-color);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.optionsContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.textGame {
+    font-family: var(--title-font);
+    color: var(--quaternary-color);
+    font-size: 2rem;
+    line-height: 2.6rem;
+}
+
+.moves {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.moveButton {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.2rem;
+    border: none;
+    background-color: var(--quaternary-color);
+    font-size: 6rem;
+    cursor: pointer;
+}
+
+.result {
+    background-color: var(--quaternary-color);
+    font-size: 1.2rem;
+    width: 24.9rem;
+    height: 8rem;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultText {
+    font-family: var(--body-font);
+    color: var(--primary-color);
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.scores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.gameOver {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.finalMessage {
+    background-color: var(--quaternary-color);
+    font-size: 1.2rem;
+    width: 24.9rem;
+    height: 8rem;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.endResult {
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    font-size: 2rem;
+}
