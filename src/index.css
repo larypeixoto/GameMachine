@@ -1,14 +1,14 @@
 :root {
-    --primary-color: #00071f;
-    --secondary-color: #050022;
-    --tertiary-color: #2390f5;
-    --quaternary-color: #6a06a8;
-    --shadow-color: #072bcafd;
-    --light-color: #00ffffd7;
-    --color-blue-selected: #3b9dfa;
-    
-    --page-titles-font:"Saira Stencil", sans-serif;
-    --page-texts-font: "Miranda Sans", sans-serif;
+  --primary-color: #00071f;
+  --secondary-color: #050022;
+  --tertiary-color: #2390f5;
+  --quaternary-color: #6a06a8;
+  --shadow-color: #072bcafd;
+  --light-color: #00ffffd7;
+  --color-blue-selected: #3b9dfa;
+
+  --page-titles-font: "Saira Stencil", sans-serif;
+  --page-texts-font: "Miranda Sans", sans-serif;
 }
 
 
@@ -20,22 +20,29 @@
 
 body {
   background-color: var(--secondary-color);
-  height: 100%;
-  padding-bottom: 4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #pageTitle {
-    font-family: var(--page-titles-font);
-    color: var(--tertiary-color);
-    text-shadow: 2px 2px 4px var(--shadow-color);
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
+  font-family: var(--page-titles-font);
+  color: var(--tertiary-color);
+  text-shadow: 2px 2px 4px var(--shadow-color);
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
 }
 
 #pageSubtitle {
-    font-family: var(--page-titles-font);
-    color: var(--tertiary-color);
-    text-shadow: 2px 2px 4px var(--shadow-color);
-    font-size: 1.5rem;
-    letter-spacing: 0.08rem;
+  font-family: var(--page-titles-font);
+  color: var(--tertiary-color);
+  text-shadow: 2px 2px 4px var(--shadow-color);
+  font-size: 1.5rem;
+  letter-spacing: 0.08rem;
 }

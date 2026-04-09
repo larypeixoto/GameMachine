@@ -1,4 +1,4 @@
-.navbar {
+.container {
   background-color: var(--primary-color);
   height: 4rem;
   display: flex;
@@ -15,7 +15,7 @@
   margin: 0 0 2rem 0;
 }
 
-.navbar:hover {
+.container:hover {
   animation: pulseNeon 1s infinite;
 }
 

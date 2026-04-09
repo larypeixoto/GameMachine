@@ -1,11 +1,15 @@
 import { Router } from "./routes/Router";
-import { Navbar } from "./components/navbar/navbar";
+import { Header } from "./components/header/header";
+import { Footer } from "./components/footer/footer";
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <Router />
+      <Header />
+      <main style={{ flex: 1 }}>
+        <Router />
+      </main>
+      <Footer />
     </>
   );
 }

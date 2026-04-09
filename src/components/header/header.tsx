@@ -1,15 +1,14 @@
-import styles from "./navbar.module.css";
+import styles from "./header.module.css";
 import { useNavigate } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
 
 
-export function Navbar() {
+export function Header() {
   const navigate = useNavigate();
 
   return (
-    <>
-      <div className={styles.navbar}>
+      <header className={styles.container}>
         <div className={styles.intro}>
           <img
             src={logo} alt="Game Machine Logo"
@@ -20,7 +19,6 @@ export function Navbar() {
             Game Machine
           </h1>
         </div>
-      </div>
-    </>
+      </header>
   );
 }

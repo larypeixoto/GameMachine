@@ -1,0 +1,33 @@
+.container {
+    background-color: var(--primary-color);
+    border-top: 1px solid var(--tertiary-color);
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px;
+    box-shadow:
+        0 0 1px var(--tertiary-color),
+        0 0 4px var(--tertiary-color),
+        0 0 6px var(--tertiary-color),
+        0 0 8px var(--tertiary-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.content {
+    font-family: var(--page-texts-font);
+    color: var(--color-blue-selected);
+    opacity: 0.8;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+a {
+    color: var(--color-blue-selected);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--light-color);
+}

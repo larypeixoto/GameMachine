@@ -34,7 +34,7 @@ CSS Modules – estilos isolados por componente, evitando conflitos.
 
 Flexbox e Grid – alinhamento e layout responsivo.
 
-HTML semântico – uso correto de <header>, <main>, <section>, <h1>/<h2> e <button>.
+HTML semântico.
 
 # 💡 Boas Práticas Aplicadas
 
