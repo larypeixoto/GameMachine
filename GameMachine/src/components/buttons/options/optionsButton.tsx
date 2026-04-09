@@ -1,12 +1,12 @@
 import styles from "./optionsButton.module.css";
 
-export function OptionsButton({ onClick, children, selected }) {
+export function OptionsButton({ onClick, children, selected, disabled }) {
   return (
     <button
-        className={`${styles.optionsButton} ${
-          selected ? styles.selected : ""
+      className={`${styles.button} ${!selected ? styles.selected : ""
         }`}
-        onClick={onClick}
+      onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>

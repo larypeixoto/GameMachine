@@ -1,14 +1,16 @@
 export const games = [
-    {
-        id: 1,
-        title: 'Jokenpô',
-        description: 'Pedra, papel e tesoura. A pedra quebra tesoura, tesoura corta papel e papel embrulha pedra.',
-        route: '/jokenpo'
-    },
-    {
-        id: 2,
-        title: 'Jogo 2',
-        description: 'Aguarde',
-        route: '/2'
-    }
+  {
+    id: 1,
+    title: "Jo-ken-pô",
+    description:
+      "A pedra quebra a tesoura, a tesoura corta o papel e o papel embrulha a pedra.",
+    route: "/jokenpo",
+  },
+  {
+    id: 2,
+    title: "Tic-Tac-Toe",
+    description:
+      "Quem conseguir três símbolos em linha primeiro vence.",
+    route: "/tictactoe",
+  },
 ];

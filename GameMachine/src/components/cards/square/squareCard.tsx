@@ -6,7 +6,7 @@ type SquareCardProps = {
 };
 
 export function SquareCard({ title, value }: SquareCardProps) {
-    return (
+  return (
     <div className={styles.card}>
       <p className={styles.title}>{title}</p>
       <p className={styles.value}>{value}</p>

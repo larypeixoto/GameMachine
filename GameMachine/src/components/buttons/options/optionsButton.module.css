@@ -1,17 +1,16 @@
-.optionsButton {
+.button {
     width: 8rem;
     height: 2rem;
     border-radius: 0.2rem;
-    background-color: var(--quaternary-color);
+    background-color: var(--tertiary-color);
     border: none;
-    color: var(--text-color);
+    color: var(--primary-color);
     cursor: pointer;
-    font-family: var(--body-font);
+    font-family: var(--page-texts-font);
+    box-shadow: 1px 1px 5px var(--tertiary-color);
 }
 
 .selected {
-    background-color: var(--tertiary-color);
-    color: var(--quaternary-color);
-    font-weight: bold;
-    transform: scale(1.05);
+    background-color: var(--color-blue-selected);
+    opacity: 0.6;
 }

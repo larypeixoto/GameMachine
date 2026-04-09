@@ -2,10 +2,12 @@ import styles from "./jokenpo.module.css";
 
 import { useEffect, useState } from "react";
 
-import { SquareCard } from "../../components/cards/squareCard/squareCard.tsx";
+import { SquareCard } from "../../components/cards/square/squareCard.tsx";
+import { MessageCard } from "../../components/cards/message/messageCard.tsx";
 import { OptionsButton } from "../../components/buttons/options/optionsButton.tsx";
 import { winOptions } from "../../data/winOptions.js";
 import { FunctionButton } from "../../components/buttons/functions/functionButton.tsx";
+import { SquareButton } from "../../components/buttons/square/squareButton.tsx";
 
 type Movement = "rock" | "paper" | "scissors";
 type Winner = "player" | "computer" | "draw";
@@ -63,13 +65,13 @@ export function Jokenpo() {
 
     if (winner === "player") {
       setPlayerScore((score) => score + 1);
-      setResult("Você venceu.");
+      setResult("Human won.");
     } else if (winner === "computer") {
       setComputerScore((score) => score + 1);
-      setResult("Você perdeu.");
+      setResult("Machine won.");
     } else {
       setDrawScore((draw) => draw + 1);
-      setResult("Empate!");
+      setResult("Draw!");
     }
   }
 
@@ -91,99 +93,81 @@ export function Jokenpo() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Jo-ken-po!</h1>
-
+      <h1 id="pageTitle">Jo-ken-po!</h1>
       <div className={styles.containerGame}>
-        <div className={styles.targetContainer}>
-          <p className={styles.textGame}>
-            Até quantas vitórias vamos jogar?
-          </p>
-          <div className={styles.optionsContainer}>
-            {winOptions.map((option) => (
-              <OptionsButton
-                key={option.value}
-                selected={targetWins === option.value}
-                disabled={
-                  gameOver === false &&
-                  (playerScore > 0 || computerScore > 0 || drawScore > 0)
-                }
-                onClick={() => {
-                  setTargetWins(option.value);
-                  resetGame();
-                }}
-              >
-                {option.label}
-              </OptionsButton>
-            ))}
-          </div>
-          <p className={styles.textGame}>Escolha sua jogada!</p>
-          <div className={styles.moves}>
-            {moves.map((move) => (
-              <button
-                key={move}
-                className={styles.moveButton}
-                onClick={() => handlePlayerMove(move)}
-                disabled={gameOver}
-                aria-label={`Escolha ${move}`}
-                title={move.charAt(0).toUpperCase() + move.slice(1)}
-              >
-                {movementSymbol[move]}
-              </button>
-            ))}
-          </div>
-
-          {result && (
-            <div className={styles.result}>
-              <p className={styles.resultText}>
-                Você escolheu {movementSymbol[playerMove!]}
-              </p>
-              <p className={styles.resultText}>
-                e o computador escolheu {movementSymbol[computerMove!]}
-              </p>
-
-              {result === "Empate!" && (
-                <p className={styles.resultText}>Foi um empate!</p>
-              )}
-              {result === "Você venceu." && (
-                <p className={styles.resultText}>
-                  Parabéns, você ganhou a rodada!
-                </p>
-              )}
-              {result === "Você perdeu." && (
-                <p className={styles.resultText}>
-                  Que pena, você perdeu a rodada!
-                </p>
-              )}
-            </div>
-          )}
-
-          <div className={styles.score}>
-            <p className={styles.textGame}>Placar:</p>
-            <div className={styles.scores}>
-              <div className={styles.scores}>
-                <SquareCard title="Você" value={playerScore} />
-                <SquareCard title="Empates" value={drawScore} />
-                <SquareCard title="Computador" value={computerScore} />
-              </div>
-            </div>
-          </div>
-
-          {gameOver && (
-            <div className={styles.gameOver}>
-              <div className={styles.finalMessage}>
-                <p className={styles.endResult}>
-                  {playerScore > computerScore
-                    ? "Você venceu! 🎉"
-                    : "Você perdeu! 🤖"}
-                </p>
-              </div>
-              <FunctionButton onClick={resetGame}
-              >
-                Jogar novamente
-              </FunctionButton>
-            </div>
-          )}
+        <h2 id="pageSubtitle">
+          Quantas vitórias para definir um vencedor?
+        </h2>
+        <div className={styles.containerOptions}>
+          {winOptions.map((option) => (
+            <OptionsButton
+              key={option.value}
+              selected={targetWins === option.value}
+              disabled={
+                gameOver === false &&
+                (playerScore > 0 || computerScore > 0 || drawScore > 0)
+              }
+              onClick={() => {
+                setTargetWins(option.value);
+                resetGame();
+              }}
+            >
+              {option.label}
+            </OptionsButton>
+          ))}
         </div>
+        <h2 id="pageSubtitle">Faça seu movimento!</h2>
+        <div className={styles.containerMoves}>
+          {moves.map((move) => (
+            <SquareButton
+              key={move}
+              onClick={() => handlePlayerMove(move)}
+              disabled={gameOver}
+              aria={`Escolha ${move}`}
+              title={move.charAt(0).toUpperCase() + move.slice(1)}
+            >
+              {movementSymbol[move]}
+            </SquareButton>
+          ))}
+        </div>
+
+        {result && (
+          <MessageCard title={"Resultado da Partida"}>
+            <p>
+              Sua escolha foi {movementSymbol[playerMove!]} e o computador escolheu {movementSymbol[computerMove!]}
+            </p>
+            {result === "Draw!" && (
+              <p className={styles.resultText}>Foi um empate!</p>
+            )}
+            {result === "Human won." && (
+              <p className={styles.resultText}>Você venceu a partida! 🎉</p>
+            )}
+            {result === "Machine won." && (
+              <p className={styles.resultText}>O computador venceu a partida! 🤖</p>
+            )}
+          </MessageCard>
+        )}
+
+        <div className={styles.score}>
+          <h2 id="pageSubtitle" className={styles.scoreboard}>Placar:</h2>
+          <div className={styles.scores}>
+            <SquareCard title="Jogador" value={playerScore} />
+            <SquareCard title="Empates" value={drawScore} />
+            <SquareCard title="Computador" value={computerScore} />
+          </div>
+        </div>
+
+        {gameOver && (
+          <h2 className={styles.finalText}>
+            {playerScore > computerScore
+              ? "Você venceu!"
+              : "Você perdeu!"}
+          </h2>
+        )}
+
+        <FunctionButton onClick={resetGame}>
+          Jogar novamente
+        </FunctionButton>
       </div>
     </div>
   );

@@ -1,18 +1,14 @@
 :root {
     --primary-color: #00071f;
-    --secondary-color: #1e0055;
-    --tertiary-color: #BC13FE;
-    --quaternary-color: #e8c6fd;
-    --color-purple: #5F2B7F;
-    --color-pink: #EC6094;
-    --color-blue: #146CA6;
-    --color-cyan: #00FFFF;
-    --color-green: #00C63F;
-    --color-mint-cream: #BCEDDC;
-    --color-orange: #FB610A;
-
-    --title-font:"Pixelify Sans", sans-serif;
-    --body-font:"Roboto", sans-serif;
+    --secondary-color: #050022;
+    --tertiary-color: #2390f5;
+    --quaternary-color: #6a06a8;
+    --shadow-color: #072bcafd;
+    --light-color: #00ffffd7;
+    --color-blue-selected: #3b9dfa;
+    
+    --page-titles-font:"Saira Stencil", sans-serif;
+    --page-texts-font: "Miranda Sans", sans-serif;
 }
 
 
@@ -25,6 +21,21 @@
 body {
   background-color: var(--secondary-color);
   height: 100%;
-  width: 100%;
-  line-height: 1.5;
+  padding-bottom: 4rem;
+}
+
+#pageTitle {
+    font-family: var(--page-titles-font);
+    color: var(--tertiary-color);
+    text-shadow: 2px 2px 4px var(--shadow-color);
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+#pageSubtitle {
+    font-family: var(--page-titles-font);
+    color: var(--tertiary-color);
+    text-shadow: 2px 2px 4px var(--shadow-color);
+    font-size: 1.5rem;
+    letter-spacing: 0.08rem;
 }

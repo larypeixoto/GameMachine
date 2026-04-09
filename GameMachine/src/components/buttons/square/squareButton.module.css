@@ -1,0 +1,29 @@
+.button {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.2rem;
+    border: none;
+    background-color: var(--tertiary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    font-family: var(--page-titles-font);
+    color: var(--primary-color);
+    text-shadow: 1px 1px 4px var(--shadow-color);
+    font-size: 6rem;
+}
+
+@media (max-width: 768px) {
+    .button {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .content {
+        font-size: 4rem;
+    }
+}
