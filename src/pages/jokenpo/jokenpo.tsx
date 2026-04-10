@@ -2,10 +2,10 @@ import styles from "./jokenpo.module.css";
 
 import { useEffect, useState } from "react";
 
+import { winOptions } from "../../data/winOptions";
 import { SquareCard } from "../../components/cards/square/squareCard.tsx";
 import { MessageCard } from "../../components/cards/message/messageCard.tsx";
 import { OptionsButton } from "../../components/buttons/options/optionsButton.tsx";
-import { winOptions } from "../../data/winOptions.js";
 import { FunctionButton } from "../../components/buttons/functions/functionButton.tsx";
 import { SquareButton } from "../../components/buttons/square/squareButton.tsx";
 

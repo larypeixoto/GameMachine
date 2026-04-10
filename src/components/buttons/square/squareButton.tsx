@@ -1,6 +1,13 @@
 import styles from "./squareButton.module.css";
 
-export function SquareButton({ onClick, children, disabled, aria, title }) {
+type Props = {
+    onClick: () => void;
+    children: React.ReactNode;
+    disabled: boolean;
+    aria: string;
+    title: string;
+}
+export function SquareButton({ onClick, children, disabled, aria, title }: Props) {
     return (
         <button
             className={styles.button}

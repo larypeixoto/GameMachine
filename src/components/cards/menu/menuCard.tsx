@@ -3,7 +3,12 @@ import styles from './menuCard.module.css';
 
 import { useNavigate } from 'react-router-dom';
 
-export function MenuCard({ cardTitle, description, route }) {
+type Props = {
+    cardTitle: string;
+    description: string;
+    route: string;
+}
+export function MenuCard({ cardTitle, description, route }: Props) {
 
     const navigate = useNavigate();
 

@@ -1,4 +1,11 @@
-export const games = [
+type Game = {
+  id: number;
+  title: string;
+  description: string;
+  route: string;
+}
+
+export const games: Game[] = [
   {
     id: 1,
     title: "Jo-ken-pô",

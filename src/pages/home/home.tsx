@@ -1,8 +1,8 @@
 import styles from "./home.module.css";
 import logo from "../../assets/logo.png";
 
+import { games } from "../../data/games";
 import { MenuCard } from "../../components/cards/menu/menuCard.js";
-import { games } from "../../data/games.js";
 
 export function Home() {
 
