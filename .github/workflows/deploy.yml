@@ -15,7 +15,6 @@ jobs:
           node-version: 18
 
       - name: Install and Build
-        working-directory: ./GameMachine
         run: |
           npm install
           npm run build
@@ -24,4 +23,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./GameMachine/dist
+          publish_dir: ./dist
